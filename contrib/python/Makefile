@@ -97,7 +97,7 @@ bw:
 bw3:
 	gcc -c ldns_wrapper.c -O9 -fPIC -I../.. -I../../ldns -I/usr/include/python3.2 -I. -o ldns_wrapper.o
 	mkdir -p ../../.libs
-	ld -shared ldns_wrapper.o -L../../.libs -ldns -o ../../.libs/_ldns.so
+	ld -shared ldns_wrapper.o -L../../.libs -lldns -o ../../.libs/_ldns.so
 
 # Builds Python 2 wrapper from interface file.
 sw: ldns.i
